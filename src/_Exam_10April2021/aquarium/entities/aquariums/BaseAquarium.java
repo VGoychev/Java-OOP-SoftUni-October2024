@@ -27,7 +27,7 @@ public abstract class BaseAquarium implements Aquarium{
     }
 
     public void setName(String name) {
-        if (this.name == null || this.name.trim().isEmpty()){
+        if (name == null || name.trim().isEmpty()){
             throw new NullPointerException(AQUARIUM_NAME_NULL_OR_EMPTY);
         }
         this.name = name;
@@ -40,7 +40,7 @@ public abstract class BaseAquarium implements Aquarium{
 
     @Override
     public String getName() {
-        return "";
+        return this.name;
     }
 
     @Override

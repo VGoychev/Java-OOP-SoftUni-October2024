@@ -20,21 +20,21 @@ public abstract class BaseFish implements Fish{
 
     @Override
     public void setName(String name) {
-        if (this.name == null || this.name.trim().isEmpty()){
+        if (name == null || name.trim().isEmpty()){
             throw new NullPointerException(FISH_NAME_NULL_OR_EMPTY);
         }
         this.name = name;
     }
 
     public void setSpecies(String species) {
-        if (this.species == null || this.species.trim().isEmpty()){
+        if (species == null || species.trim().isEmpty()){
             throw new NullPointerException(SPECIES_NAME_NULL_OR_EMPTY);
         }
         this.species = species;
     }
 
     public void setPrice(double price) {
-        if (this.price <= 0){
+        if (price <= 0){
             throw new IllegalArgumentException(FISH_PRICE_BELOW_OR_EQUAL_ZERO);
         }
         this.price = price;
